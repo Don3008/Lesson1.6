@@ -10,35 +10,35 @@ namespace PointOfCircle
     {
         static void Main(string[] args)
         {
-            /* init_radius - радиус окружности, которую мы задаем
-             * x_coordinate, y_coordinate - координаты точки, которую нужно проверить
+            /* initRadius - радиус окружности, которую мы задаем
+             * coordinateX, coordinateY - координаты точки, которую нужно проверить
              * distance - расстояние от начала координат до точки (длина вектора)
              * s - сумма квадратов координат
              */
-            double x_coordinate, y_coordinate, init_radius, distance;
+            double coordinateX, coordinateY, initRadius, distance;
             Console.Write("Введите радиус \"distance\" вашей окружности: ");
-            init_radius = Convert.ToDouble(Console.ReadLine());
-            if (init_radius >= 0)
+            initRadius = Convert.ToDouble(Console.ReadLine());
+            if (initRadius >= 0)
             {
-                Console.Write("Введите координату \"x_coordinate\" вашей точки: ");
-                x_coordinate = Convert.ToDouble(Console.ReadLine());
-                Console.Write("Введите координату \"y_coordinate\" вашей точки: ");
-                y_coordinate = Convert.ToDouble(Console.ReadLine());
-                distance = Math.Sqrt(Math.Pow(x_coordinate, 2) + Math.Pow(y_coordinate, 2));
-                if (distance > init_radius)
+                Console.Write("Введите координату \"x\" вашей точки: ");
+                coordinateX = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Введите координату \"y\" вашей точки: ");
+                coordinateY = Convert.ToDouble(Console.ReadLine());
+                distance = Math.Sqrt(Math.Pow(coordinateX, 2) + Math.Pow(coordinateY, 2));
+                if (distance > initRadius)
                 {
-                    Console.WriteLine("Точка с координатами x_coordinate = " + x_coordinate + "; y_coordinate = " + 
-                        y_coordinate + " находится за пределами окружности");
+                    Console.WriteLine("Точка с координатами coordinateX = " + coordinateX + "; coordinateY = " + 
+                        coordinateY + " находится за пределами окружности");
                 }
-                else if (distance == init_radius)
+                else if (distance == initRadius)
                 {
-                    Console.WriteLine("Точка с координатами x_coordinate = " + x_coordinate + "; y_coordinate = " + 
-                        y_coordinate + " находится на окружности");
+                    Console.WriteLine("Точка с координатами coordinateX = " + coordinateX + "; coordinateY = " + 
+                        coordinateY + " находится на окружности");
                 }
                 else
                 {
-                    Console.WriteLine("Точка с координатами x_coordinate = " + x_coordinate + "; y_coordinate = " + 
-                        y_coordinate + " находится внутри окружности");
+                    Console.WriteLine("Точка с координатами coordinateX = " + coordinateX + "; coordinateY = " + 
+                        coordinateY + " находится внутри окружности");
                 }
             }
             else
