@@ -16,7 +16,7 @@ namespace PointOfCircle
              * s - сумма квадратов координат
              */
             double coordinateX, coordinateY, initRadius, distance;
-            Console.Write("Введите радиус \"distance\" вашей окружности: ");
+            Console.Write("Введите радиус вашей окружности: ");
             initRadius = Convert.ToDouble(Console.ReadLine());
             if (initRadius >= 0)
             {
